@@ -1,0 +1,215 @@
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    #about-txt {
+        flex-direction: row;
+        p {
+            margin: 20px;
+            text-align: end;
+        }
+
+        #p2 {
+            text-align: start;
+        }
+    }
+
+    #second-img-container {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .second-img-boxes  {
+        width: 90%;
+    }
+
+    #info-container-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .h-info {
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: end;
+        }
+        p {
+            margin: 10px;
+            text-align: end;
+        }
+    }
+
+    .li-info {  
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: start;
+        }
+        p {
+            margin: 10px;
+            text-align: start;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    header {
+        height: 380px;
+        background-image: url('../images/fuji-4-m.jpg');
+    }
+
+    #about-txt {
+        flex-direction: row;
+        p {
+            margin: 20px 40px;
+            text-align: end;
+        }
+
+        #p2 {
+            text-align: start;
+        }
+    }
+
+    #img-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*#info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }*/
+
+    #second-img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #info-container-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .h-info {
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: end;
+        }
+        p {
+            margin: 10px;
+            text-align: end;
+        }
+    }
+
+    .li-info {  
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: start;
+        }
+        p {
+            margin: 10px;
+            text-align: start;
+        }
+    }
+
+      
+    footer {
+        padding-left: 10%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    header {
+        height: 460px;
+        background-image: url('../images/fuji-4-b.jpg');
+    }
+
+    #about-txt {
+        flex-direction: row;
+        p {
+            margin: 40px 70px;
+            text-align: end;
+        }
+
+        #p2 {
+            text-align: start;
+        }
+    }
+
+    #img-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*#info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }*/
+
+    #second-img-container {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .second-img-boxes  {
+        width: 70%;
+    }
+
+    #info-container-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .h-info {
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: end;
+        }
+        p {
+            margin: 10px;
+            text-align: end;
+        }
+    }
+
+    .li-info {  
+        max-width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            text-align: start;
+        }
+        p {
+            margin: 10px;
+            text-align: start;
+        }
+    }
+      
+    footer {
+        padding-left: 13%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

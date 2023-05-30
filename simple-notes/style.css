@@ -1,0 +1,186 @@
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #b1c2d3;
+}
+
+#addbox {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: white;
+    /*color: #0476D9;*/
+    color: #588dc2;
+    font-size: 1.2em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #00000013;
+}
+
+#addbutt {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    /*color: #0476D9;*/
+    color: #588dc2;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid #588dc2;
+    border-style: dashed;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #00000057;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionbox {
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.questionbox .finalbox  h1, label {
+    color: #363636;
+    margin-left: 5%;
+}
+
+.questionbox h1 {
+    width: 360px;
+    margin: 20px 0px 70px 5%;
+    border-bottom: 1px solid #afafaf;
+}
+
+.questionbox label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#errormsg {
+    margin-left: 5%;
+    margin-bottom: 5px;
+    color: #ff3030;
+    visibility: hidden;
+}
+
+.intxt {
+    height: 50px;
+    width: 350px;
+    border: 1px solid #afafaf;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 1em;
+    margin: 5px 0px 30px 5%;
+}
+
+#createnote {
+    height: 35px;
+    width: 359px;
+    margin-left: 5%;
+    border-radius: 5px;
+    background-color: #588dc2;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px #00000013;
+    transition: .5s ease-in-out;
+}
+
+#createnote:hover {
+    background-color: #6d97c2;
+}
+
+#cancel {
+    height: 35px;
+    width: 359px;
+    margin-left: 5%;
+    background-color: #ff3030;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #00000013;
+    transition: .5s ease-in-out;
+}
+
+#cancel:hover {
+    background-color: #ff4040;
+}
+
+#aside {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.finalbox {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #00000013;
+    line-break: anywhere;
+}
+
+.htitle {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #363636;
+}
+
+.pdescript {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin: 0px 10px 0px 10px;
+    color: #363636;
+}
+
+.delete {
+    height: 20px;
+    width: 100px;
+    margin: 0px 0px 10px 10px;
+    background-color: #ff3030;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #00000013;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#delete:hover {
+    background-color: #ff4040;
+}

@@ -1,0 +1,45 @@
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    main {
+        width: 450px;
+    }
+
+    #i-api {
+        width: 80%;
+    }
+    
+    #joke-box {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        height: 470px;
+        width: 550px;
+    }
+
+    #i-api {
+       width: 70%;
+       margin: 100px 0px 50px 0px;
+    }
+    
+    #joke-box {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    main {
+        height: 490px;
+        width: 570px;
+    }
+
+    #i-api {
+       width: 70%;
+       margin: 100px 0px 50px 0px;
+    }
+    
+    #joke-box {
+        width: 70%;
+    }
+}

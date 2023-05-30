@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main id="addbox">
+        <button id="addbutt">
+            +
+        </button>
+        <p>Add new note</p>
+    </main>
+
+    <aside id="aside">
+       
+    </aside>
+
+    <div class="container hide">
+        <div class="center">
+            <div class="questionbox hide">
+                <h1>Add note</h1>
+
+                <p id="errormsg">
+                    Input fields cannot be empty!
+                </p>
+
+                <label for="ititle">Title</label>
+                <input type="text" class="ititle intxt" placeholder="Write your title here..." minlength="1" maxlength="20">
+
+                <label for="idescript">Description</label>
+                <input type="text" class="idescript intxt" placeholder="Write your description here..." minlength="1" maxlength="250">
+
+                <button id="createnote">
+                    Add Note
+                </button>
+
+                <button id="cancel">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

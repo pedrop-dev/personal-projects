@@ -1,0 +1,10 @@
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}

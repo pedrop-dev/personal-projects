@@ -1,0 +1,101 @@
+@use './var';
+
+.main {
+    height: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    bottom: 5%;
+    border-radius: 80px 0px 0px 0px;
+    background-color: var.$c1;
+    .main-header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 30px;
+        width: 95%;
+        .main-header-box {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: var.$border-radius;
+            color: var.$c1;
+            background: var.$gradient;
+            box-shadow: var.$bshadow;
+            h3 {
+                margin-bottom: 3px;
+            }
+        }
+        .main-body {
+            height: 320px;
+            width: 90%;
+            position: absolute;
+            top: 30%;
+            margin-top: 0px;
+            /*background-color: tomato;*/
+            .tasks {
+                height: 80px;
+                border-radius: var.$border-radius;
+                /*background-color: aquamarine;*/
+                .container {
+                    .checkmark {
+                        height: 30px;
+                        width: 30px;
+                        position: absolute;
+                        top: 8%;
+                        left: 5%;
+                        border: 1px solid #808080;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        background-color: var.$c1;
+                    }
+                }
+                /*.container:hover input ~ .checkmark {
+                    background-color: #ccc;
+                }*/
+                .container input:checked ~ .checkmark {
+                    border: none;
+                    background: var.$gradient;
+                }
+                .container input {
+                    visibility: hidden;
+                }
+                .container .checkmark:after {
+                    content: "\2714";
+                    position: absolute;
+                    top: 3px;
+                    left: 9px;
+                    color: var.$c1;
+                    /*-webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);*/
+                }
+                .container input:checked ~ .checkmark:after {
+                    display: block;
+                }
+                p {
+                    font-weight: bold;
+                    position: absolute;
+                    left: 15%;
+                    top: 10%;
+                    padding-right: 20px;
+                    text-align: justify;
+                    color: var.$c4;
+                }
+            }
+            /*.tasks:hover {
+                background: var.$gradient;
+                p {
+                    color: var.$c1;
+                }
+            }*/
+        }
+    }
+}

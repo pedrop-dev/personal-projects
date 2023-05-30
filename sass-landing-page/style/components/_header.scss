@@ -1,0 +1,58 @@
+$c1: #111;
+$c2: #fff;
+$c3: #ffffff;
+$box-shadow:  8px 8px 10px #00000021 !default;
+
+header {
+    height: 350px;
+    background-color: $c1;
+    background-image: url('../images/fuji-4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    opacity: 1;
+    h2 {
+        color: $c2;
+        
+        animation: rollIn;
+        animation-duration: 1s;
+        /*animation-iteration-count: infinite;*/
+    }
+    ul {
+        display: flex;
+        li {
+            margin: 0px 10px;
+            list-style: none;
+            a {
+                padding: 6px;
+                text-decoration: none;
+                color: $c2;
+            }
+
+            a:hover {
+                
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+#htxt-section {
+    text-align: center;
+    margin: 100px 50px;
+    h1 {
+        margin-bottom: 50px;
+        color: $c2;
+    }
+    p {
+        color: $c3;
+    }
+}
