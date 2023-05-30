@@ -1,0 +1,47 @@
+@use './var';
+
+body {
+    height: 100vh;
+    main {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        section {
+            height: 400px;
+            width: 80%;
+            background: var.$gradient;
+            border-radius: var.$border-radius;
+            box-shadow: var.$bshadow;
+            form {
+                #task {
+                    height: 50px;
+                    width: 50%;
+                    padding: 10px;
+                    border-radius: var.$border-radius;
+                    border: none;
+                    outline: none;
+                    background: var.$c1;
+                }
+            }
+            button {
+                height: 50px;
+                width: 150px;
+                border-radius: var.$border-radius;
+                outline: none;
+                border: none;
+                font-weight: bold;
+                font-size: 1em;
+                color: var.$c2;
+                cursor: pointer;
+                background: var.$c1;
+                box-shadow: var.$bshadow;
+                a {
+                    margin: 50px 150px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
