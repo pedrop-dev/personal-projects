@@ -6,17 +6,16 @@ import AddStyle from './style/components/_Add.scss'
 export default function Add() {
     return (
         <>
-            <main>
+            <main className='add-main'>
                 <section>
-                    <form>
-                        <label htmlFor="task">
-                            Task
-                        </label>
-                        <input type="text" id="task" />
+                    <h1>Add task</h1>
+                    <form action="">
+                        <input type="text" id="task" placeholder='Add your task..' />
+                    
+                        <Link to='/' className='link'>
+                            <button>Add</button>
+                        </Link>
                     </form>
-                    <Link to='/'>
-                        <button>Add</button>
-                    </Link>
                 </section>
             </main>
         </>

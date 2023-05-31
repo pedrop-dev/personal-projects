@@ -2,44 +2,60 @@
 
 body {
     height: 100vh;
-    main {
+    .add-main {
         height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        background: var.$gradient;
         section {
             height: 400px;
             width: 80%;
-            background: var.$gradient;
+            display: flex;
+            flex-direction: column;
+            background: var.$c1;
             border-radius: var.$border-radius;
             box-shadow: var.$bshadow;
+            h1 {
+                margin: 20px 0px 120px 40px;
+                color: var.$c4;
+            }
             form {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 #task {
                     height: 50px;
-                    width: 50%;
+                    width: 80%;
                     padding: 10px;
+                    margin-bottom: 30px;
                     border-radius: var.$border-radius;
-                    border: none;
+                    border: 1px solid var.$c5;
                     outline: none;
-                    background: var.$c1;
                 }
             }
-            button {
-                height: 50px;
-                width: 150px;
-                border-radius: var.$border-radius;
-                outline: none;
-                border: none;
-                font-weight: bold;
-                font-size: 1em;
-                color: var.$c2;
-                cursor: pointer;
-                background: var.$c1;
-                box-shadow: var.$bshadow;
-                a {
-                    margin: 50px 150px;
-                    text-decoration: none;
+            .link {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                button {
+                    height: 50px;
+                    width: 80%;
+                    border-radius: var.$border-radius;
+                    outline: none;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 1em;
+                    color: var.$c1;
+                    cursor: pointer;
+                    background: var.$gradient;
+                    box-shadow: var.$bshadow;
                 }
             }
         }

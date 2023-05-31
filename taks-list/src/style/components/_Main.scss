@@ -12,12 +12,12 @@
     background-color: var.$c1;
     .main-header {
         height: 100px;
+        width: 95%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px;
         margin-top: 30px;
-        width: 95%;
         .main-header-box {
             height: 80px;
             width: 80px;
@@ -51,7 +51,7 @@
                         position: absolute;
                         top: 8%;
                         left: 5%;
-                        border: 1px solid #808080;
+                        border: 1px solid var.$c5;
                         border-radius: 8px;
                         cursor: pointer;
                         background-color: var.$c1;
