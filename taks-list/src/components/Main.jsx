@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import MainStyle from '../style/components/_Main.scss'
 
+import Add from '../Add'
+
 export default function Main() {
     const week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
 
@@ -23,7 +25,7 @@ export default function Main() {
                                 <input type="checkbox"/>
                                 <span className='checkmark'></span>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur.
+                                    Lorem ipsum
                                 </p>
                             </label>
                         </div>

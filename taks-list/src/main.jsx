@@ -8,11 +8,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from  'react-router-dom'
 
 import Add from './Add'
 
-const AppContext = createContext(null)
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppContext.Provider value={{}}>
       <Router>
         <Routes>
           <Route path='/' element={<App />}/>
@@ -24,6 +21,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           }/>
         </Routes>
       </Router>
-    </AppContext.Provider>
   </React.StrictMode>
 )
