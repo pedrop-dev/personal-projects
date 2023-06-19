@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import MainStyle from '../style/components/_Main.scss'
-
+import '../style/components/_Main.scss'
 import Add from '../Add'
 
 export default function Main() {
@@ -25,7 +24,7 @@ export default function Main() {
                                 <input type="checkbox"/>
                                 <span className='checkmark'></span>
                                 <p>
-                                    Lorem ipsum
+                                    text
                                 </p>
                             </label>
                         </div>
