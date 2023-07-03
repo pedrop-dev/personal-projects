@@ -9,8 +9,16 @@
     box-sizing: border-box;
 }
 
-.square {
-    height: 150px;
-    width: 150px;
+.Board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.Tile {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #151515;
 }

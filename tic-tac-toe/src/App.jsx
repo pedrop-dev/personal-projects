@@ -1,41 +1,53 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-import React, { useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import './style/index.css'
 
-function Square() {
-  const [value, setValue] = useState(null)
+export default function App( ){
 
-  function handleClick() {
-    setValue('X')
-  }
+	const [boardData, setBoardData] = useState([null, null, null, null, null, null, null, null, null])
+	const [player, setPlayer] = useState('X')
 
-  return (
-    <button className="square" onClick={handleClick}>
-      {value}
-    </button>
-  )
-}
+	const switchPlayer = () => {
+		if(player === 'X') {
+			setPlayer('O')
+		} else {
+			setPlayer('X')
+		}
+	}
 
-export default function App() {
-  const [squares, setSquares] = useState(Array(9).fill(null))
+	const updateBoard = (index) => {
+		const newBoardData = [...boardData]
+		if(newBoardData[index] === null) {
+			newBoardData[index] = player
+			setBoardData(newBoardData)
+			switchPlayer()
+		}
+	}
 
-  return (
-    <>
-      <div className="board-row">
-        <Square value={squares[0]}/>
-        <Square value={squares[1]}/>
-        <Square value={squares[2]}/>
-      </div>
-      <div className="board-row">
-        <Square value={squares[3]}/>
-        <Square value={squares[4]}/>
-        <Square value={squares[5]}/>
-      </div>
-      <div className="board-row">
-        <Square value={squares[6]}/>
-        <Square value={squares[7]}/>
-        <Square value={squares[8]}/>
-      </div>
-    </>
-  )
+	function Tile({ index, tile }) {
+		return(
+			<div className="Tile" onClick={() => updateBoard(index)}>
+				<h1>{tile}</h1>
+			</div>
+		)
+	}
+
+	function Board() {
+		return (
+			<div className="Board">
+				{
+					boardData.map((tile, index) => {
+						return <Tile key={index} index={index} tile={tile} />
+					})
+				}
+			</div>
+		)
+	}
+
+	return (
+		<div className="App">
+			<Board />
+		</div>
+	)
 }
