@@ -1,8 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Routes, Route, Link } from  'react-router-dom'
-import Add from '../Add'
-import HeaderStyle from '../style/components/_Header.scss'
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom/client'
+import '../style/components/_Header.scss'
 
 export default function Header() {
     const months = [
@@ -24,6 +22,12 @@ export default function Header() {
     const day = date.getDate()
     const month = months[date.getMonth()]
 
+    const [modal, setModal] = useState(false)
+
+    const handleClick = () => {
+        setModal(!modal)
+    }
+
     return (
         <>
             <header className="header">
@@ -34,9 +38,9 @@ export default function Header() {
                 </div>
                 <div className="hbox2">
                     <h3>{`${month} ${day}`}</h3>
-                    <Link to='/Add'>
-                        <button>Add new</button>
-                    </Link>
+                    <button onClick={handleClick}>
+                        Add new
+                    </button>
                 </div>
             </header>
         </>

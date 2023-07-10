@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import '../style/components/_Main.scss'
-import Add from '../Add'
 
 export default function Main() {
     const week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
