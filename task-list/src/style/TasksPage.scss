@@ -1,0 +1,153 @@
+@use './var';
+
+body {
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var.$main-c;
+}
+
+.header {
+    height: 200px;
+    background-color: var.$main-c;
+    .header_section {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+        h2 {
+            color: var.$white;
+        }
+    }
+    .header_aside {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+        margin-top: 30px;
+        h2 {
+            color: var.$white;
+        }
+        p {
+            text-align: center;
+            color: lightgray;
+        }
+        form {
+            display: flex;
+            gap: 6px;
+            .form_input_text {
+                height: 40px;
+                width: 75%;
+                border: none;
+                outline: none;
+                padding-left: 10px;
+                border-radius: 10px 0px 0px 10px;
+                box-shadow: var.$shadow;
+            }
+            .form_input_submit {
+                height: 40px;
+                width: 25%;
+                background-color: var.$white;
+                outline: none;
+                border: none;
+                border-radius: 0px 10px 10px 0px;
+                cursor: pointer;
+                padding: 5px;
+                box-shadow: var.$shadow;
+            }
+            .form_input_submit:hover {
+                background-color: rgb(245, 245, 245);
+            }
+        }
+    }
+}
+
+.main {
+    min-height: 73%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50px 0px 0px 0px;
+    background-color: var.$white;
+    .main_section_date {
+        height: auto;
+        width: 90%;
+        background-color: var.$white;
+        margin: 50px 0px 0px 50px;
+        .main_section_div {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: var.$main-c;
+            box-shadow: var.$shadow;
+            h2 {
+                color: var.$white;
+            }
+            p {
+                color: lightgray;
+            }
+        }
+    }
+    .main_section_tasks {
+        min-height: 50px;
+        margin-left: 50px;
+        padding: 10px 10px 10px 0px;
+        //background-color: tomato;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+                height: 50px;
+                width: 100%;
+                min-height: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 10px;
+                border-radius: 5px;
+                list-style: none;
+                cursor: pointer;
+                transition: ease-in-out;
+                //background-color: aquamarine;
+                p {
+                    font-weight: bold;
+                    color: #3e3e3e;
+                }
+                .li_delete_button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    cursor: pointer;
+                    background-color: var.$main-c;
+                    border: none;
+                    border-radius: 5px;
+                    .trash_icon {
+                        font-size: 1.5em;
+                        color: var.$white;
+                    }
+                }
+            }
+            li:hover {
+                background-color: var.$main-c;
+                box-shadow: var.$shadow;
+                p {
+                    color: var.$white;
+                }
+                .li_delete_button {
+                    background-color: var.$white;
+                    .trash_icon {
+                        color: var.$main-c;
+                    }
+                }
+            }
+        }
+    }
+}
