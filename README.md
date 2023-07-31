@@ -33,3 +33,13 @@
 * Sass 
 
 🔗: https://pedrop-dev.github.io/personal-projects/sass-landing-page/
+
+### Task List <br>
+**Tools**
+* HTML5
+* CSS3 
+* Sass
+* JavaScript
+* React JS
+
+🔗:
