@@ -42,4 +42,4 @@
 * JavaScript
 * React JS
 
-🔗:
+🔗: personal-projects-alpha.vercel.app
