@@ -84,7 +84,12 @@ export default function TaskApp() {
                             tasks.map((task, index) => (
                                 <li key={Math.random() * 1000}>
                                     <p>{task}</p>
-                                    <button onClick={() => handleDeleteTask(index)} className='li_delete_button'>
+                                    <button 
+                                        onClick={() => {
+                                            handleDeleteTask(index)
+                                            setTasksNumber(tasks.length - 1)
+                                        }}
+                                        className='li_delete_button'>
                                         <FaRegTrashAlt className='trash_icon'/>
                                     </button>
                                 </li>
