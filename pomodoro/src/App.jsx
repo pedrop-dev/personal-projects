@@ -1,36 +1,46 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 export default function App() {
-	async function getResponse() {
-		const response = await fetch(
-			""
-		)
-		const data = await response
-		console.log(data)
+	const [minutes, setMinutes] = useState(25)
+	const [seconds, setSeconds] = useState(0)
+
+	useEffect(() => {
+		
+		let interval = setInterval(() => {
+			clearInterval(interval)
+
+			setSeconds(prevCount => prevCount - 1)
+
+			if (seconds === 0) {
+				if (minutes !== 0) {
+					setMinutes(minutes - 1)
+					setSeconds(59)
+				} else {
+					//
+				}
+			} else {
+				setSeconds(seconds - 1)
+			}
+		}, [1000])
+	}, [seconds])
+
+	function handleStart() {
 	}
 
 	return (
     <>
 		<header>
-			<h1>API</h1>
+			<h1>Pomodoro</h1>
 		</header>
 		<main>
-			{/*<form action='GET'>
-				<input 
-					type="text" 
-					className="input_text" 
-					placeholder='Nome do veículo' 
-				/>
-
-				<input 
-					type="submit" 
-					value="Procurar" 
-					onClick={getResponse}
-				/>
-	</form>*/}
-			<button onClick={getResponse}>test</button>
+			<section>
+				<div>
+					<p>{minutes} : {seconds}</p>
+				</div>
+				<input type="button" value="Start" onClick={handleStart}/>
+			</section>
 		</main>
     </>
   )
