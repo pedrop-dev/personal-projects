@@ -50,5 +50,6 @@
 * CSS3 
 * JavaScript
 * React JS
+* TailwindCSS
 
 🔗: 
