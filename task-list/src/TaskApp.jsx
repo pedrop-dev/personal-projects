@@ -43,7 +43,7 @@ export default function TaskApp() {
         <>
             <header className='header'>
                 <section className='header_section'>
-                    <h2>Tasks App</h2>
+                    <h2>Simple Tasks App</h2>
                     <h2>{date + ' ' + month}</h2>
                 </section>
                 <aside className='header_aside'>
@@ -59,7 +59,7 @@ export default function TaskApp() {
                             value={newTask}
                             onChange={(e) => setNewTask(e.target.value)}
                             minLength={1}
-                            maxLength={33}
+                            maxLength={30}
                         />
 
                         <input 
@@ -83,7 +83,7 @@ export default function TaskApp() {
                         {
                             tasks.map((task, index) => (
                                 <li key={Math.random() * 1000}>
-                                    <p>{task}</p>
+                                    <p>{task.toLowerCase()}</p>
                                     <button 
                                         onClick={() => {
                                             handleDeleteTask(index)
