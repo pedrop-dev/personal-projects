@@ -1,6 +1,14 @@
 # Personal projects
 > Projects made for practice and learn new features 🎯
 
+### Simple Notes <br>
+**Tools** 
+* HTML5 
+* CSS3 
+* JavaScript <br>
+
+🔗: https://pedrop-dev.github.io/personal-projects/simple-notes/
+
 ### Pokedex Page <br>
 **Tools** 
 * HTML5 
@@ -9,14 +17,6 @@
 
 🔗: https://pedrop-dev.github.io/personal-projects/pokedex/
 <br> [ Youtube tutorial video ]( https://m.youtube.com/watch?v=SjtdH3dWLa8 )
-
-### Simple Notes <br>
-**Tools** 
-* HTML5 
-* CSS3 
-* JavaScript <br>
-
-🔗: https://pedrop-dev.github.io/personal-projects/simple-notes/
 
 ### Jokes Generator <br>
 **Tools** 
@@ -50,5 +50,6 @@
 * CSS3 
 * JavaScript
 * React JS
+* TailwindCSS
 
-🔗: 
+🔗: [personal-projects-oboy-oyaw7i4oo-pedrop-dev.vercel.app](https://personal-projects-oboy-oyaw7i4oo-pedrop-dev.vercel.app/)
