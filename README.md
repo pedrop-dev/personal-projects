@@ -43,3 +43,12 @@
 * React JS
 
 🔗: [personal-projects-alpha.vercel.app](https://personal-projects-alpha.vercel.app)
+
+### Pomodoro <br>
+**Tools**
+* HTML5
+* CSS3 
+* JavaScript
+* React JS
+
+🔗: 
