@@ -8,8 +8,8 @@ export default {
     extend: {},
     colors: {
       //Neutral
-      white: "#e5e7eb", 
-      dwhite: "#f4f4f5",
+      white: "#f5f5f5", 
+      dwhite: "#fafaf9",
       gray: "#a1a1aa",
       dgray: "#6b7280",
       //Green

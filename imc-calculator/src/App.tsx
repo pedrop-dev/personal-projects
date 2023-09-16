@@ -9,6 +9,7 @@ export default function App() {
 	const [kg, setKg] = useState<number>()
 	const [imc, setIMC] = useState<number | null>(null)
 	const [data, setData] = useState<string>('')
+	const [dataDetail, setDataDetail] = useState<string>('')
 	const [error, setError] = useState<string>('')
 
 	function calculateIMC(e: { preventDefault: () => void }) {
@@ -27,15 +28,20 @@ export default function App() {
 			const finalIMC = weightKg / (heightMeters * heightMeters)
 
 			if (finalIMC < 18.5) {
-				setData("BMI below 18.5: Underweight")
+				setData("Below 18.5")
+				setDataDetail("Underweight")
 			} else if (finalIMC < 24.9) {
-				setData("BMI between 18.5 and 24.9: Healthy weight")
+				setData("Between 18.5 and 24.9")
+				setDataDetail("Healthy weight")
 			} else if (finalIMC < 29.9) {
-				setData("BMI between 25.0 and 29.9: Overweight")
+				setData("Between 25.0 and 29.9")
+				setDataDetail("Overweight")
 			} else if (finalIMC < 39.9) {
-				setData("BMI between 30.0 and 34.9: Obesity grade 1")
+				setData("Between 30.0 and 34.9")
+				setDataDetail("Obesity grade 1")
 			} else {
-				setData("BMI equal to or greater than 40: Obesity grade 3")
+				setData("Equal to or greater than 40")
+				setDataDetail("Obesity grade 3")
 			}
 			
 			setIMC(finalIMC)
@@ -53,7 +59,15 @@ export default function App() {
 					IMC Calculator
 				</h1>*/}
 			</header>
-			<main className='h-4/5 w-11/12 flex flex-row bg-dwhite inset-center rounded-lg shadow-md'>
+			<main className='
+				h-4/5 
+				w-11/12 
+				flex flex-row 
+				inset-center 
+				rounded-lg 
+				shadow-md
+				bg-dwhite' 
+			>
 				<form 
 					className='
 					h-full 
@@ -65,23 +79,24 @@ export default function App() {
 					rounded-l-lg
 					bg-white'
 				>
-					<h2 className='text-xl text-center mb-32 text-dgray'>
+					<h2 className='text-2xl text-center mb-32 mt-16 text-dgray'>
 						Calculate your IMC
 					</h2>
+
 					<input 
 						type="number" 
 						placeholder='Height' 
 						value={height} 
 						onChange={(e) => setHeight(e.target.value)}
 						className='
-							h-10 
-							w-11/12 
-							mb-8 
-							rounded 
-							pl-2.5 
-							outline-0
-							[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
-							' 
+						h-10 
+						w-11/12 
+						mb-8 
+						rounded 
+						pl-2.5 
+						outline-0
+						[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+						' 
 					/>
 
 					<input 
@@ -90,14 +105,14 @@ export default function App() {
 						value={weight} 
 						onChange={(e) => setWeight(e.target.value)}
 						className='
-							h-10 
-							w-11/12 
-							mb-8 
-							rounded 
-							pl-2.5 
-							outline-0
-							[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
-							' 
+						h-10 
+						w-11/12 
+						mb-8 
+						rounded 
+						pl-2.5 
+						outline-0
+						[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+						' 
 					/>
 
 					<button type="submit" onClick={calculateIMC}
@@ -117,8 +132,8 @@ export default function App() {
 				<section className='w-6/12 flex flex-col items-center justify-around'>
 
 					<div className='
-						h-36 
-						w-36 
+						h-32 
+						w-32 
 						flex 
 						items-center 
 						justify-center 
@@ -145,8 +160,8 @@ export default function App() {
 					</div>
 
 					<div className='
-						h-36 
-						w-36 
+						h-32 
+						w-32 
 						flex 
 						items-center 
 						justify-center 
@@ -173,8 +188,8 @@ export default function App() {
 					</div>
 
 					<div className='
-						h-36 
-						w-36 
+						h-32 
+						w-32 
 						flex 
 						items-center 
 						justify-center 
@@ -204,11 +219,22 @@ export default function App() {
 						</div>
 					</div>
 
-					<div className='w-36 text-center'>
+					<div className='
+						h-32
+						w-32 
+						rounded-lg
+						text-dgray
+						bg-white
+						shadow-md'
+					>
 						{
-							<p className='text-sm'>
-								{data}
-							</p>
+							<div className=''
+							>	
+								<p className='text-center pt-3 pb-10'>{dataDetail}</p>
+								<p className='text-sm text-center text-gray '>
+									{data}
+								</p>
+							</div>
 						}
 					</div>
 				</section>
