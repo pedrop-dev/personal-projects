@@ -13,8 +13,8 @@ export default {
       gray: "#a1a1aa",
       dgray: "#6b7280",
       //Green
-      green: "#4ade80",
-      dgreen: "#22c55e",
+      green: "#6ee7b7",
+      hgreen: "#a7f3d0",
       //Red
       red: "#dc2626",
     }

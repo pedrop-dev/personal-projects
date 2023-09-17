@@ -61,7 +61,11 @@ export default function App() {
 			</header>
 			<main className='
 				h-4/5 
-				w-11/12 
+				w-11/12
+				sm:max-md:w-10/12
+				md:max-lg:w-9/12
+				lg:max-xl:w-8/12
+				xl:w-7/12
 				flex flex-row 
 				inset-center 
 				rounded-lg 
@@ -96,6 +100,8 @@ export default function App() {
 						pl-2.5 
 						outline-0
 						[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+						lg:max-xl:h-12
+						xl:h-12
 						' 
 					/>
 
@@ -112,6 +118,8 @@ export default function App() {
 						pl-2.5 
 						outline-0
 						[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+						lg:max-xl:h-12
+						xl:h-12
 						' 
 					/>
 
@@ -120,8 +128,10 @@ export default function App() {
 						h-10 
 						w-11/12
 						rounded
-						bg-green
-						shadow-md'
+						shadow-md
+						lg:max-xl:h-12
+						xl:h-12
+						bg-gradient-to-r from-green to-hgreen'
 					>
 						Calculate
 					</button>
@@ -150,7 +160,8 @@ export default function App() {
 							justify-center 
 							border-4 
 							border-green 
-							rounded-full'
+							rounded-full
+							border-gradient-to-r from-green to-hgreen'
 						>
 							<h3 className='text-2xl text-dgray'>
 								Height
@@ -178,7 +189,8 @@ export default function App() {
 							justify-center 
 							border-4 
 							border-green 
-							rounded-full'
+							rounded-full
+							border-gradient-to-r from-green to-hgreen'
 						>
 							<h3 className='text-2xl text-dgray'>
 								Weight
@@ -206,7 +218,8 @@ export default function App() {
 							justify-center 
 							border-4 
 							border-green 
-							rounded-full'
+							rounded-full
+							border-gradient-to-r from-green to-hgreen'
 						>
 							<h3 className='text-2xl text-dgray'>
 								IMC
