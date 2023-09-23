@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-config {
+    @apply h-8 w-24 text-d-white border-2 border-d-white rounded-sm text-sm 
+}
+
+.logo {
+    @apply text-xl font-semibold font-serif text-white
+}
+
+.link-color {
+    @apply text-gray hover:underline text-base
+}
