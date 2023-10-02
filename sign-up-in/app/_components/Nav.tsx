@@ -5,13 +5,15 @@ import { useState, useEffect } from 'react'
 import {signIn, signOut, useSession , getProviders} from 'next-auth/react'
 
 export default function Nav() {
-    const isUserLogged = true
+    const isUserLogged = false
 
     return (
         <nav className='h-14 bg-bg flex justify-between items-center px-6 md:px-20'>
             <section className='logo'>
-                <h1 className='text-white'>
-                    Logo
+                <h1 className='text-white text-2xl'>
+                    <Link href="/">
+                        Web Unity
+                    </Link>
                 </h1>
             </section>
 
@@ -32,13 +34,18 @@ export default function Nav() {
                         {
                             (
                                 <div className='flex gap-5'>
-                                    <button className='button-config'>
-                                        Sign Up
-                                    </button>
-
-                                    <button className='button-config'>
-                                        Sign In
-                                    </button>
+                                    <Link href="/signup">
+                                        <button className='button-config'>
+                                            Sign Up
+                                        </button>
+                                    </Link>
+                                    
+                                    <Link href="/signin">
+                                        <button className='button-config'>
+                                            Sign In
+                                        </button>
+                                    </Link>
+                                    
                                 </div>
                             )
                         }

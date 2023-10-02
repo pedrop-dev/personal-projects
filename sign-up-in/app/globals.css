@@ -6,6 +6,10 @@
     @apply h-8 w-24 text-d-white border-2 border-d-white rounded-sm text-sm 
 }
 
+.big-button-config {
+    @apply h-14 w-80 xl:h-14 xl:w-96 text-d-white border-2 border-d-white rounded-sm text-sm 
+}
+
 .logo {
     @apply text-xl font-semibold font-serif text-white
 }
