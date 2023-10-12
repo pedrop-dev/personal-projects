@@ -36,7 +36,7 @@ export default function Signin() {
                     
                     <button 
                         type="submit"
-                        className="h-14 w-9/12 text-d-white border-solid border-2 border-d-white rounded-sm sm:w-7/12 md:w-6/12 lg:w-5/12 xl:w-4/12"
+                        className="h-14 w-4/12 text-d-white border-solid border-2 border-d-white rounded-sm md:w-3/12 lg:w-3/12 xl:w-2/12"
                     >
                         Sign In
                     </button>

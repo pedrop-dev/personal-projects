@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style/TasksPage.scss'
 
 //Icons
@@ -9,25 +9,45 @@ import './style/TasksPage.scss'
 import { FaRegTrashAlt } from "react-icons/fa"
 
 export default function TaskApp() {
-    const [tasks, setTask] = useState([])
+    const [tasks, setTasks] = useState([])
     const [newTask, setNewTask] = useState('')
 
     const [tasksNumber, setTasksNumber] = useState(0)
 
+    useEffect(() => {
+        const storedTasks = localStorage.getItem('tasks')
+        if (storedTasks) {
+            setTasks(JSON.parse(storedTasks))
+            setTasksNumber(JSON.parse(storedTasks).length)
+        }
+
+    }, [])
+
+    const updateLocalStorage = (tasksData) => {
+        localStorage.setItem('tasks', JSON.stringify(tasksData))
+    }
+
     function handleAddTask(e) {
         e.preventDefault()
-        
-        newTask == ''  ? 
-        console.log('error') : 
-        setTask([...tasks, newTask])
-        setNewTask('')
 
-        setTasksNumber(tasks.length + 1)
+        if (newTask === '') {
+            console.log(error)
+        } else {
+            const updatedTasks = [...tasks, newTask]
+            setTasks(updatedTasks)
+            setNewTask('')
+            setTasksNumber(updatedTasks.length)
+
+            updateLocalStorage(updatedTasks)
+        }
     }
 
     const handleDeleteTask = (index) => {
         const updatedTasks = tasks.filter((_, i) => i !== index);
-        setTask(updatedTasks);
+        setTasksNumber(updatedTasks.length)
+        setTasks(updatedTasks);
+
+        updateLocalStorage(updatedTasks)
     }
 
     const d = new Date()
