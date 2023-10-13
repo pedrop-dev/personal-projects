@@ -28,7 +28,7 @@ addb.addEventListener('click', () => {
 
             const p = document.createElement("p")
             p.classList.add('pdescript')
-            div.appendChild(p)
+            div.appendChild(p)z
 
             h2.innerHTML += `${ititle.value}`
             p.innerHTML += `${idescript.value}`
